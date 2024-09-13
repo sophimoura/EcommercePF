@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= produto.nome %> - TechVibe</title>
+    <link rel="stylesheet" href="/stylesheets/detalheProduto.css">
+</head>
+<body>
+    <%- include('./partials/cabecalho') %>
+    
+    <div class="product-detail">
+        <img src="<%= produto.imagens[0] %>" alt="<%= produto.nome %>">
+        <h1><%= produto.nome %></h1>
+        <p><%= produto.descricao %></p>
+        <p>R$ <%= produto.preco.toFixed(2) %></p>
+        <p>Estoque: <%= produto.estoque %></p>
+    </div>
+    
+    <%- include('./partials/rodape') %>
+</body>
+</html>
